@@ -20,6 +20,7 @@ class EmailParser
           email.split(" ")
         end
       end
+      binding.pry
     else
       parsed_emails = @emails.split(" ")
     end
