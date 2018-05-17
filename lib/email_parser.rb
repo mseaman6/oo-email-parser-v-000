@@ -12,9 +12,9 @@ def initialize(email_list)
 end
 
 def parse
-  @emails.split(", ")
-  @emails.split(" ")
-  @emails
+  parsed_emails = @emails.split(", ")
+  parsed_emails = @emails.split(" ")
+  parsed_emails
 end
 
 end
