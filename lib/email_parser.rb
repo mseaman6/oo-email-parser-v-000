@@ -21,7 +21,7 @@ class EmailParser
         email
       end
     end
-    parsed_emails.uniq
+    parsed_emails.flatten.uniq
   end
 
 
