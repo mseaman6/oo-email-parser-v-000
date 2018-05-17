@@ -14,6 +14,11 @@ class EmailParser
   def parse
     if @emails.include?(",")
       parsed_emails = @emails.split(", ")
+      parsed_emails.collect do |email|
+        if email.include?(" ")
+          email.split(" ")
+        end
+      end
     else
       parsed_emails = @emails.split(" ")
     end
