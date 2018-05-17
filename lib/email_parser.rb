@@ -13,17 +13,12 @@ class EmailParser
   end
 
   def parse
-    if @emails.include?(",")
-      parsed_emails = @emails.split(", ")
-      parsed_emails.collect do |email|
-        if email.include?(" ")
-          parsed_emails += email.split(" ")
-          parsed_emails.delete(email)
-        end
+    parsed_emails = @emails.split(", ")
+    parsed_emails.collect do |email|
+      if email.include?(" ")
+        parsed_emails += email.split(" ")
+        parsed_emails.delete(email)
       end
-    else
-      parsed_emails = @emails.split(" ")
-    end
     parsed_emails.uniq
   end
 
