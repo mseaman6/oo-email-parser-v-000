@@ -14,13 +14,13 @@ class EmailParser
 
   def parse
     parsed_emails = @emails.split(", ")
-    parsed_emails.collect do |email|
+    parsed_emails.collect! do |email|
       if email.include?(" ")
-        parsed_emails += email.split(" ")
-        parsed_emails.delete(email)
+        email.split(" ")
       end
     end
     parsed_emails.uniq
   end
+
 
 end
