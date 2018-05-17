@@ -19,6 +19,7 @@ class EmailParser
         parsed_emails += email.split(" ")
         parsed_emails.delete(email)
       end
+    end
     parsed_emails.uniq
   end
 
