@@ -8,11 +8,11 @@ class EmailParser
 attr_accessor :emails
 
 def initialize(email_list)
-
+  @emails = email_list
 end
 
 def parse
-  email_list.split(", ")
+  @emails.split(", ")
 end
 
 end
