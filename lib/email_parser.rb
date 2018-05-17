@@ -21,7 +21,6 @@ class EmailParser
           parsed_emails.delete(email)
         end
       end
-      binding.pry
     else
       parsed_emails = @emails.split(" ")
     end
