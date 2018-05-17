@@ -17,7 +17,7 @@ class EmailParser
       parsed_emails = @emails.split(", ")
       parsed_emails.collect do |email|
         if email.include?(" ")
-          parsed_emails << email.split(" ")
+          parsed_emails += email.split(" ")
           parsed_emails.delete(email)
         end
       end
