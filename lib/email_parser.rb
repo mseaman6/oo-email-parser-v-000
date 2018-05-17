@@ -12,9 +12,11 @@ def initialize(email_list)
 end
 
 def parse
-  parsed_emails = []
-  parsed_emails << @emails.split(", ")
-  parsed_emails << @emails.split(" ")
+  if @emails.include?(",")
+    parsed_emails = @emails.split(", ")
+  else
+    parsed_emails = @emails.split(" ")
+  end
   parsed_emails
 end
 
